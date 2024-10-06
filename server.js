@@ -26,10 +26,10 @@ const express = require('express');
 
    app.use('/', require('./server/routes/router'))
 
-   // This line is important for Vercel
+   // for Vercel
    module.exports = app;
 
-   // Only run the server if not on Vercel
+ 
    if (process.env.NODE_ENV !== 'production') {
      app.listen(PORT, () => {
        console.log(`Server is running on http://localhost:${PORT}`);
